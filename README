@@ -32,6 +32,15 @@ $('body').llCoolJ();
 with options
 
 $('body').llCoolJ({
+  'host' : String hostname
   'inset' : true,
   'interactive' : true
 });
+
+
+example hostname usage: 
+
+hostname is optional and should only be used if you need llcoolj to come from a prefered server.
+host = example.com
+
+example.com contains subfolder and file at example.com/images/llcoolj.jpg
