@@ -25,7 +25,6 @@
 	    	var imgsrc = "llcoolj.jpg";
 	    	var hostIndex = coolHosts.length-1;
 	    	var timeoutMs = 2000;
-	    	var useTextVersion = false;
 	    	
     		if(settings['host']!=null)
 	    	{
@@ -65,7 +64,7 @@
 				{
 					// no more hosts, use text
 					isLoaded = true;
-					useTextVersion = true;
+					useTextVersion();
 					
 				}
 				else
@@ -73,20 +72,14 @@
 					loadImg();
 				}
 			}
-			else
-			{
-				
-			}
 		};
 		loadImg();
 		
-		if(useTextVersion)
+		useTextVersion = function() 
 		{
-			$('#llCoolJ').addClass('inset');
-		}
+			$('#llCoolJ').html("LLCOOLJ IS MISSING");
 			
-	    	
-	    	
+		}
 		
 		if(settings['inset']){
 			$('#llCoolJ').addClass('inset');
